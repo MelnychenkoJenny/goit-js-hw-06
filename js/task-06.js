@@ -6,10 +6,10 @@ inputEl.addEventListener('blur', onValidationInputBlur);
 function onValidationInputBlur(event) {
   inputEl.classList.toggle(
     'valid',
-    event.currentTarget.value.length == dataLength,
+    event.currentTarget.value.trim().length == dataLength,
   );
   inputEl.classList.toggle(
     'invalid',
-    event.currentTarget.value.length != dataLength,
+    event.currentTarget.value.trim().length != dataLength,
   );
 }
