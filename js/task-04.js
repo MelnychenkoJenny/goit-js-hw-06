@@ -1,7 +1,7 @@
 let counterValue = 0;
 const counterEl = document.querySelector('#value');
-const decrementBtn = document.querySelector('button[data-action="decrement"]');
-const incrementBtn = document.querySelector('button[data-action="increment"]');
+const decrementBtn = document.querySelector('[data-action="decrement"]');
+const incrementBtn = document.querySelector('[data-action="increment"]');
 
 function onDecrementBtnClick() {
   counterValue -= 1;
