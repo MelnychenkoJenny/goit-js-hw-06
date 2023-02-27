@@ -4,12 +4,14 @@ const dataLength = inputEl.dataset.length; // or inputEl.getAttribute('data-leng
 inputEl.addEventListener('blur', onValidationInputBlur);
 
 function onValidationInputBlur(event) {
+
   inputEl.classList.toggle(
     'valid',
-    event.currentTarget.value.trim().length == dataLength,
+    event.currentTarget.value.trim().length === Number(dataLength),
   );
+  
   inputEl.classList.toggle(
     'invalid',
-    event.currentTarget.value.trim().length != dataLength,
+    event.currentTarget.value.trim().length !== Number(dataLength),
   );
 }

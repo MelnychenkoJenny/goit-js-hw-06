@@ -8,9 +8,11 @@ function onFormSubmit(event) {
     elements: { email, password },
   } = event.currentTarget;
   if (email.value.trim() === '' || password.value === '') {
-    return alert('УВАГА! Всі поля мають бути заповнені. Гарного та мирного дня ;)');
+    return alert(
+      'УВАГА! Всі поля мають бути заповнені. Гарного та мирного дня ;)',
+    );
   }
-  
+
   const objFormData = {
     email: email.value,
     password: password.value,

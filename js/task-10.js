@@ -1,6 +1,6 @@
-const inputEl = document.querySelector('input[type=number]');
-const btnCreateEl = document.querySelector('button[data-create]');
-const btnDestroyEl = document.querySelector('button[data-destroy]');
+const inputEl = document.querySelector('#controls input[type="number"]');
+const btnCreateEl = document.querySelector('[data-create]');
+const btnDestroyEl = document.querySelector('[data-destroy]');
 const boxesEl = document.querySelector('#boxes');
 
 function createBoxes(amount) {
@@ -22,6 +22,7 @@ btnDestroyEl.addEventListener('click', onDestroyBoxesClick);
 
 function onCreateBoxesClick() {
   boxesEl.insertAdjacentHTML('afterbegin', createBoxes(inputEl.value));
+  inputEl.value = '';
   boxesEl.style.cssText = 'display:flex; gap:10px; flex-wrap:wrap;';
 }
 
